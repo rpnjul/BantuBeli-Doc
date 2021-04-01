@@ -56,3 +56,12 @@ SELECT z.*
 ```sql
 select * from bb_products WHERE rowid in (SELECT MIN(rowid) FROM bb_products GROUP BY sku) ORDER BY ID ASC;
 ```
+## Laravel Query Log
+
+```php
+$queries = DB::getQueryLog();
+\DB::connection()->enableQueryLog();
+$data = $order->all();
+$queries = \DB::getQueryLog();
+return dd($queries);
+```

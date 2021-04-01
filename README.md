@@ -1,1 +1,13 @@
-# BantuBeli-Doc
+# Bantu Beli Documentation
+Bantu Beli Documentation for Supporting Developing
+
+## RADIANS FUNCTION DATABASE
+
+```bash
+CREATE OR REPLACE FUNCTION MARKETPLACE.RADIANS(nDEGREES IN NUMBER)
+  RETURN NUMBER DETERMINISTIC IS
+  BEGIN
+  RETURN nDegrees / (180/ACOS(-1));
+ END RADIANS;
+/
+```

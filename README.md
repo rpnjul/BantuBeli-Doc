@@ -59,9 +59,6 @@ select * from bb_products WHERE rowid in (SELECT MIN(rowid) FROM bb_products GRO
 ## Laravel Query Log
 
 ```php
-$queries = DB::getQueryLog();
-\DB::connection()->enableQueryLog();
-$data = $order->all();
-$queries = \DB::getQueryLog();
-return dd($queries);
+DB::enableQueryLog();
+DB::getQueryLog();
 ```

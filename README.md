@@ -50,3 +50,9 @@ SELECT z.*
          WHERE y.product_count >= 1) z
  WHERE z.rn <= 4;   
 ```
+
+##QUERY SELECT ALL WITH GROUP BY ORACLE
+
+```sql
+select * from bb_products WHERE rowid in (SELECT MIN(rowid) FROM bb_products GROUP BY sku) ORDER BY ID ASC;
+```

@@ -44,11 +44,11 @@ SELECT z.*
                                     2)
                                     AS jarak
                             FROM store
-                           WHERE groups_id = 1) x
+                           WHERE groups_id = 1 AND ROWNUM <= 12) x
                    WHERE x.jarak < 10.0
                 ORDER BY x.jarak ASC) y
          WHERE y.product_count >= 1) z
- WHERE z.rn <= 4;   
+ WHERE z.rn <= 4;
 ```
 
 ## QUERY SELECT ALL WITH GROUP BY ORACLE

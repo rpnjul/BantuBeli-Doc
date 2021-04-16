@@ -62,3 +62,9 @@ select * from bb_products WHERE rowid in (SELECT MIN(rowid) FROM bb_products GRO
 DB::enableQueryLog();
 DB::getQueryLog();
 ```
+
+## CRONJOB TABS SETTINGS
+
+```cli
+crontabs -e
+```

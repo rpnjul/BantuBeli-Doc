@@ -65,6 +65,6 @@ DB::getQueryLog();
 
 ## CRONJOB TABS SETTINGS
 
-```cli
-crontabs -e
+```bash
+crontab -e
 ```

@@ -66,5 +66,6 @@ DB::getQueryLog();
 ## CRONJOB TABS SETTINGS
 
 ```bash
+sudo apt-get bantubeli
 crontab -e
 ```

@@ -23,7 +23,8 @@ SELECT z.*
                             FROM bb_products
                            WHERE store_id = x.id)
                             AS product_count
-                    FROM (SELECT store.*,
+                    FROM (SELECT ROWNUM rns,
+                                 store.*,
                                  (SELECT CONCAT ('https://www.bantubeli.com',
                                                  img)
                                     FROM store_groups
@@ -34,21 +35,20 @@ SELECT z.*
                                      * ACOS (
                                               COS (RADIANS (latitude))
                                             * COS (
-                                                 RADIANS (-6.188284862877379))
+                                                 RADIANS ('".$user->latitude."'))
                                             * COS (
-                                                   RADIANS (106.82262846921707)
+                                                   RADIANS ('".$user->longtitude."')
                                                  - RADIANS (longtitude))
                                           +   SIN (RADIANS (latitude))
                                             * SIN (
-                                                 RADIANS (-6.188284862877379)))),
+                                                 RADIANS ('".$user->latitude."')))),
                                     2)
                                     AS jarak
-                            FROM store
-                           WHERE groups_id = 1 AND ROWNUM <= 12) x
-                   WHERE x.jarak < 10.0
+                            FROM store WHERE groups_id = 1 AND PROVINCE = '".$user->province."') x
+                   WHERE x.jarak < 10.0 and x.rns < 100
                 ORDER BY x.jarak ASC) y
          WHERE y.product_count >= 1) z
- WHERE z.rn <= 4;
+ WHERE z.rn <= 8;
 ```
 
 ## QUERY SELECT ALL WITH GROUP BY ORACLE

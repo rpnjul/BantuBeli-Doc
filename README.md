@@ -1,6 +1,23 @@
 # Bantu Beli Documentation
 Bantu Beli Documentation for Supporting Developing
 
+---
+## Navigation
+[-] [RADIANS FUNCTION DATABASE](#radians-function-database)
+
+[-] [QUERY PERHITUNGAN JARAK LONGLAT](#query-perhitungan-jarak-longlat)
+
+[-] [QUERY SELECT ALL WITH GROUP BY ORACLE](#query-select-all-with-group-by-oracle)
+
+[-] [QUERY SELECT DATA MASTER ALAMAT BY KODE POS](#query-select-data-master-alamat-by-kode-pos)
+
+[-] [Laravel Query Log](#laravel-query-log)
+
+[-] [CRONJOB TABS SETTINGS](#cronjob-tabs-settings)
+
+
+---
+
 ## RADIANS FUNCTION DATABASE
 RADIANS UNTUK MENGHITUNG JARAK LONGITUDE DAN LATITUDE
 

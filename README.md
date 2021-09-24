@@ -15,6 +15,10 @@ Bantu Beli Documentation for Supporting Developing
 
 [-] [CRONJOB TABS SETTINGS](#cronjob-tabs-settings)
 
+[-] [VIEW SESSION IN ORACLE DB] (#viewing-session-in-oracle-db)
+
+[-] [KILL SESSION IN ORACLE DB] (#kill-session-in-oracle-db)
+
 
 ---
 
